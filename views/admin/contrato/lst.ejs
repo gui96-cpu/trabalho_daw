@@ -1,0 +1,90 @@
+<%-include('../cabecalho.ejs')%>
+<section class="col-12 col-md-10">
+    <div class="card my-4 shadow-lg" style="border-radius: 12px; border: none;">
+        <h5 class="card-header text-white" style="background-color: #28a745; font-size: 1.5rem; font-weight: bold; border-top-left-radius: 12px; border-top-right-radius: 12px;">
+            Lista de Contratos
+        </h5>
+        <div class="card-body" style="background-color: #f9f9f9; padding: 30px; border-bottom-left-radius: 12px; border-bottom-right-radius: 12px;">
+           
+
+            <table class="table table-striped table-bordered" style="border-radius: 8px; overflow: hidden;">
+                <thead class="thead-dark" style="background-color: #2d2d2d;">
+                    <tr>
+                        <th scope="col" class="text-white">ID</th>
+                        <th scope="col" class="text-white">Nome</th>
+                        <th scope="col" class="text-white">Valor</th>
+                        <th scope="col" class="text-white">Data</th>
+                        <th scope="col" class="text-white">Editar</th>
+                        <th scope="col" class="text-white">Deletar</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% Contrato.forEach(function(contrato) { %>
+                        <tr style="background-color: #ffffff;">
+                            <th scope="row" style="font-weight: bold; color: #333333;">
+                                <%= contrato._id %> 
+                            </th>
+                            <td style="color: #333333;">
+                                <%= contrato.nome %>
+                            </td>
+                            <td style="color: #333333;">
+                                <%= contrato.valormensal %>
+                            </td>
+                            <td style="color: #333333;">
+                                <%=moment(contrato.datacontrato).format('DD/MM/YYYY')%>
+                            </td>
+                            <td>
+                                <a href="/admin/contrato/edt/<%= contrato._id %>" class="btn btn-warning btn-sm" style="border-radius: 8px; font-weight: bold;">
+                                    Editar
+                                </a>
+                            </td>
+                            <td>
+                                <a href="/admin/contrato/del/<%= contrato._id %>" class="btn btn-danger btn-sm" style="border-radius: 8px; font-weight: bold;">
+                                    Deletar
+                                </a>
+                            </td>
+                        </tr>
+                    <% }) %>
+                </tbody>
+            </table>
+        </div>
+    </div>
+  </section>
+  
+  <!-- Estilos adicionais -->
+  <style>
+    .form-control {
+        background-color: #ffffff;
+        border: 1px solid #ccc;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+  
+    .form-control:focus {
+        border-color: #28a745;
+        box-shadow: 0 0 10px rgba(40, 167, 69, 0.5);
+    }
+  
+    .btn {
+        font-size: 14px;
+        font-weight: bold;
+    }
+  
+    .btn-warning:hover {
+        background-color: #e8a400;
+    }
+  
+    .btn-danger:hover {
+        background-color: #d9534f;
+    }
+  
+    .btn-success:hover {
+        background-color: #218838;
+    }
+  
+    table td, table th {
+        vertical-align: middle;
+    }
+  </style>
+  
+
+  <%-include('../rodape.ejs')%>

@@ -1,0 +1,52 @@
+<%-include('../cabecalho.ejs')%>
+<section class="col-12 col-md-10">
+  <div class="card my-4 shadow-lg" style="border-radius: 12px; border: none;">
+      <div class="card-header text-white" style="background-color: #28a745; font-size: 1.5rem; font-weight: bold; border-top-left-radius: 12px; border-top-right-radius: 12px;">
+          Adicionar Contrato
+      </div>
+      <div class="card-body" style="background-color: #f9f9f9; padding: 30px; border-bottom-left-radius: 12px; border-bottom-right-radius: 12px;">
+          <form method="post">
+              <div class="mb-3">
+                  <label for="nome" class="form-label" style="font-weight: bold; color: #333;">Nome do Contrato</label>
+                  <input type="text" name="nome" required id="nome" class="form-control" placeholder="Digite o nome do contrato" style="border-radius: 8px;">
+              </div>
+
+              <div class="mb-3">
+                  <label for="valormensal" class="form-label" style="font-weight: bold; color: #333;">Valor Mensal</label>
+                  <input type="number" name="valormensal" required id="valormensal" class="form-control" placeholder="Informe o valor mensal" style="border-radius: 8px;">
+              </div>
+
+              <div class="mb-3">
+                  <label for="datacontrato" class="form-label" style="font-weight: bold; color: #333;">Data do Contrato</label>
+                  <input type="date" name="datacontrato" required id="datacontrato" class="form-control" style="border-radius: 8px;">
+              </div>
+
+              <div class="mb-3">
+                  <button type="submit" class="btn btn-success btn-block" style="border-radius: 8px; font-weight: bold; padding: 12px; font-size: 1rem; transition: background-color 0.3s;">
+                      Adicionar Contrato
+                  </button>
+              </div>
+          </form>
+      </div>
+  </div>
+</section>
+
+<!-- Estilos para botões e interação -->
+<style>
+  .form-control {
+      background-color: #ffffff;
+      border: 1px solid #ccc;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+
+  .form-control:focus {
+      border-color: #28a745;
+      box-shadow: 0 0 10px rgba(40, 167, 69, 0.5);
+  }
+
+  .btn-success:hover {
+      background-color: #218838;
+  }
+</style>
+
+        <%-include('../rodape.ejs')%>

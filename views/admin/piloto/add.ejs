@@ -1,0 +1,69 @@
+<%-include('../cabecalho.ejs')%>
+<section class="col-12 col-md-10">
+  <div class="card my-4 shadow-lg" style="border-radius: 12px; border: none;">
+      <div class="card-header text-white" style="background-color: #28a745; font-size: 1.5rem; font-weight: bold; border-top-left-radius: 12px; border-top-right-radius: 12px;">
+          Adicionar Piloto
+      </div>
+      <div class="card-body" style="background-color: #f9f9f9; padding: 30px; border-bottom-left-radius: 12px; border-bottom-right-radius: 12px;">
+          <form method="post">
+              <div class="mb-3">
+                  <label for="nome" class="form-label">Nome</label>
+                  <input type="text" name="nome" required id="nome" class="form-control" placeholder="Digite o nome do piloto" style="border-radius: 8px;">
+              </div>
+              <div class="mb-3">
+                  <label for="cpf" class="form-label">CPF</label>
+                  <input type="text" maxlength="11" name="cpf" required id="cpf" class="form-control" placeholder="Digite o CPF" style="border-radius: 8px;">
+              </div>
+              <div class="mb-3">
+                  <label for="certificado" class="form-label">Certificado</label>
+                  <input type="text" name="certificado" required id="certificado" class="form-control" placeholder="Digite o número do certificado" style="border-radius: 8px;">
+              </div>
+              <div class="mb-3">
+                  <input type="submit" value="Adicionar" class="form-control btn btn-success" style="border-radius: 8px; font-weight: bold;">
+              </div>
+          </form>
+      </div>
+  </div>
+</section>
+
+<!-- Estilos adicionais -->
+<style>
+  .form-control {
+      background-color: #ffffff;
+      border: 1px solid #ccc;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      font-size: 14px;
+  }
+
+  .form-control:focus {
+      border-color: #28a745;
+      box-shadow: 0 0 10px rgba(40, 167, 69, 0.5);
+  }
+
+  .form-label {
+      font-weight: bold;
+      color: #333333;
+  }
+
+  .btn-success {
+      font-size: 16px;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+  }
+
+  .btn-success:hover {
+      background-color: #218838;
+  }
+
+  .card {
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .card-header {
+      background-color: #28a745;
+      font-size: 1.5rem;
+      font-weight: bold;
+  }
+</style>
+
+        <%-include('../rodape.ejs')%>

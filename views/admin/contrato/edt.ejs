@@ -1,0 +1,79 @@
+<%-include('../cabecalho.ejs')%>
+<section class="col-12 col-md-10">
+
+    <div class="card my-4 shadow-lg" style="border-radius: 12px; border: none; overflow: hidden;">
+        <h5 class="card-header text-white" 
+            style="background-color: #007bff; font-size: 1.5rem; font-weight: bold; border-top-left-radius: 12px; border-top-right-radius: 12px;">
+            Lista Contrato
+        </h5>
+        <div class="card-body" style="background-color: #f8f9fa; padding: 30px;">
+
+            <form method="post">
+
+                <div class="mb-4">
+                    <!-- Campo Nome -->
+                    <label for="nome" class="form-label" style="font-weight: bold; color: #333;">Nome</label>
+                    <input type="text" name="nome" required id="nome" class="form-control" 
+                        style="border-radius: 8px;" value="<%= Contrato.nome %>">
+                </div>
+                
+                <div class="mb-4">
+                    <!-- Campo Valor Mensal -->
+                    <label for="valormensal" class="form-label" style="font-weight: bold; color: #333;">Valor Mensal</label>
+                    <input type="number" name="valormensal" required id="valormensal" class="form-control" 
+                        style="border-radius: 8px;" value="<%= Contrato.valormensal %>">
+                </div>
+                
+                <div class="mb-4">
+                    <!-- Campo Data -->
+                    <label for="datacontrato" class="form-label" style="font-weight: bold; color: #333;">Data do Contrato</label>
+                    <input type="date" name="datacontrato" required id="datacontrato" class="form-control" 
+                        style="border-radius: 8px;" value="<%= Contrato.datacontrato %>">
+                </div>
+                
+                <!-- Botão de Envio -->
+                <div class="text-center">
+                    <button type="submit" class="btn btn-primary" 
+                        style="width: 100%; border-radius: 8px; font-weight: bold; padding: 10px;">
+                        Salvar Contrato
+                    </button>
+                </div>
+                
+                <!-- Estilos Adicionais -->
+                <style>
+                    .form-control {
+                        font-size: 16px;
+                        color: #495057;
+                        background-color: #fff;
+                        border: 1px solid #ced4da;
+                        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+                        padding: 12px;
+                    }
+                
+                    .form-control:focus {
+                        border-color: #007bff;
+                        box-shadow: 0 0 8px rgba(0, 123, 255, 0.5);
+                    }
+                
+                    .btn-primary:hover {
+                        background-color: #0056b3;
+                        border-color: #004085;
+                    }
+                
+                    .form-label {
+                        font-size: 14px;
+                        margin-bottom: 5px;
+                        display: block;
+                    }
+                
+                    .text-center button {
+                        transition: all 0.3s ease-in-out;
+                    }
+                
+                    .text-center button:hover {
+                        transform: scale(1.03);
+                    }
+                </style>
+                
+
+    <%-include('../rodape.ejs')%>

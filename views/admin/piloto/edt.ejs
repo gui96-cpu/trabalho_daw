@@ -1,0 +1,58 @@
+<%-include('../cabecalho.ejs')%>
+<section class="col-12 col-md-10 mx-auto">
+    <div class="card my-4 shadow-lg" style="border-radius: 12px; border: none;">
+        <div class="card-header text-white" style="background-color: #28a745; font-size: 1.5rem; font-weight: bold; border-top-left-radius: 12px; border-top-right-radius: 12px;">
+            Editar Piloto
+        </div>
+        <div class="card-body" style="background-color: #f9f9f9; padding: 30px; border-bottom-left-radius: 12px; border-bottom-right-radius: 12px;">
+            <form method="post" style="max-width: 600px; margin: 0 auto;">
+            
+        
+
+                <!-- Campo Nome -->
+                <div class="mb-4">
+                    <label for="nome" class="form-label">Nome</label>
+                    <input type="text" name="nome" id="nome" class="form-control" value="<%= Piloto.nome %>" required style="border-radius: 8px;">
+                </div>
+
+                <!-- Campo CPF -->
+                <div class="mb-4">
+                    <label for="cpf" class="form-label">CPF</label>
+                    <input type="text" name="cpf" id="cpf" class="form-control" maxlength="11" value="<%= Piloto.cpf %>" required style="border-radius: 8px;">
+                </div>
+
+                <!-- Campo Certificado -->
+                <div class="mb-4">
+                    <label for="certificado" class="form-label">Certificado</label>
+                    <input type="text" name="certificado" id="certificado" class="form-control" value="<%= Piloto.certificado %>" required style="border-radius: 8px;">
+                </div>
+
+                <!-- Botão Submit -->
+                <div class="d-grid">
+                    <button type="submit" class="btn btn-success btn-lg" style="border-radius: 8px; font-weight: bold;">Salvar Alterações</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+
+<!-- Estilo Adicional -->
+<style>
+    .form-control {
+        background-color: #ffffff;
+        border: 1px solid #ccc;
+        font-size: 1rem;
+    }
+    .form-control:focus {
+        border-color: #28a745;
+        box-shadow: 0 0 10px rgba(40, 167, 69, 0.5);
+    }
+    .btn-success:hover {
+        background-color: #218838;
+    }
+    .card-header {
+        text-align: center;
+    }
+</style>
+
+    <%-include('../rodape.ejs')%>
